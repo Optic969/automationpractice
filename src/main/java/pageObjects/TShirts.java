@@ -4,15 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import utils.Utils;
-import org.openqa.selenium.WebDriver;
 
 public class TShirts {
 
@@ -42,7 +39,6 @@ public class TShirts {
         scrollToElement(driver.findElement(By.xpath(getTShirtsAddToCartBtn)));
         driver.findElement(By.xpath(getTShirtsAddToCartBtn)).click();
         driver.findElement(By.xpath(getContinueShopingBtn)).click();
-
     }
 }
 

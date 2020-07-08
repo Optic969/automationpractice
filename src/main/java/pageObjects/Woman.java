@@ -10,7 +10,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import utils.Utils;
 
-
 public class Woman {
 
     public WebDriver driver;
@@ -39,6 +38,5 @@ public class Woman {
         scrollToElement(driver.findElement(By.xpath(getWomanAddToCartBtn)));
         driver.findElement(By.xpath(getWomanAddToCartBtn)).click();
         driver.findElement(By.xpath(getContinueShopingBtn)).click();
-
     }
 }
