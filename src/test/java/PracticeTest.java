@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class PracticeTest {
 
     public static WebDriver driver;
-    Woman women = new Woman(driver);
+    public Woman women = new Woman(driver);
     TShirts tShirts = new TShirts(driver);
     HomePage homepage = new HomePage(driver);
     Actions action = new Actions(driver);
