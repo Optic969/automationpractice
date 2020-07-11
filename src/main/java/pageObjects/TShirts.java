@@ -13,7 +13,7 @@ import utils.Utils;
 
 public class TShirts {
 
-    public WebDriver driver;
+    WebDriver driver;
 
     public TShirts (WebDriver driver) {
         this.driver = driver;

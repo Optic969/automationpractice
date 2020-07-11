@@ -1,9 +1,12 @@
 package utils;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,7 +16,14 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class Utils {
-    public WebDriver driver;
+    public static WebDriver driver;
+
+    public Utils(){
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
+
     /*private static final Properties locators;
     private static final String PROPERTIES_FILE_PATH = "/locators.properties";
 

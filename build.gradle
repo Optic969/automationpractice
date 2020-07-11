@@ -10,9 +10,15 @@ repositories {
     mavenLocal()
     mavenCentral()
 }
+
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
+
 test {
     useJUnitPlatform()
-    jvmArgs '--enable-preview'
+    //jvmArgs '--enable-preview'
     //maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
     /*useTestNG() {
             includeGroups 'smoke', 'sanity'
@@ -27,12 +33,10 @@ dependencies {
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'*/
     testImplementation 'junit:junit:4.12'
     implementation 'junit:junit:4.12'
-    testCompile 'junit:junit:4.12'
-    testCompile("io.github.bonigarcia:webdrivermanager:4.0.0")
-    testCompile 'com.codeborne:selenide:5.12.2'
-    testCompile 'io.cucumber:cucumber-java:6.1.0'
-    testCompile 'io.cucumber:cucumber-junit:6.1.0'
-    //testCompile 'info.cukes:cucumber-core:1.1.5'
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation("io.github.bonigarcia:webdrivermanager:4.0.0")
+    implementation 'com.codeborne:selenide:5.12.2'
+    testImplementation 'io.cucumber:cucumber-java:6.1.0'
+    testImplementation 'io.cucumber:cucumber-junit:6.1.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
 }
 

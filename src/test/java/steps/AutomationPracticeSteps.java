@@ -4,11 +4,10 @@ package steps;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import pageObjects.*;
+import utils.Utils;
 
 
-public class AutomationPracticeSteps {
-
-    static WebDriver driver;
+public class AutomationPracticeSteps extends Utils {
 
     Woman woman = new Woman(driver);
     Dresses dresses= new Dresses(driver);

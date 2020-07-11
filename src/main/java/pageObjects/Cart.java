@@ -14,7 +14,7 @@ import utils.Utils;
 
 public class Cart {
 
-    public WebDriver driver;
+    WebDriver driver;
 
     public Cart (WebDriver driver) {
         this.driver = driver;

@@ -12,7 +12,7 @@ import utils.Utils;
 
 public class Woman {
 
-    public WebDriver driver;
+    WebDriver driver;
 
     public Woman (WebDriver driver) {
         this.driver = driver;

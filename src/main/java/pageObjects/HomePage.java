@@ -13,7 +13,7 @@ import utils.Utils;
 
 public class HomePage {
 
-    public WebDriver driver;
+    WebDriver driver;
     private String getSearchField = "//input[@name='search_query']" ;
     private String getSearchItem = "//button[@name='submit_search']";
     private String getCheckbox = "//input[@name='layered_category_4']";
