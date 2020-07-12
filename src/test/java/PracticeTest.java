@@ -1,19 +1,20 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.*;
-import org.openqa.selenium.chrome.ChromeOptions;
-import pageObjects.*;
+/*import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import pageObjects.*;
+import utils.Utils;
 
-import java.time.Duration;
 import java.util.Collections;
-import java.util.concurrent.TimeUnit;
 
-public class PracticeTest {
+public class PracticeTest extends Utils {
 
-    public static WebDriver driver;
-    public Woman women = new Woman(driver);
+    // Declare driver and base url
+    //Initialize pages
+    Woman women = new Woman(driver);
     TShirts tShirts = new TShirts(driver);
     HomePage homepage = new HomePage(driver);
     Actions action = new Actions(driver);
@@ -23,6 +24,7 @@ public class PracticeTest {
 
     @BeforeClass
     public static void setupTest() {
+
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         /*action = new Actions(driver);
@@ -30,7 +32,7 @@ public class PracticeTest {
         dresses = new Dresses(driver);
         tShirts = new TShirts(driver);
         cart = new Cart(driver);
-        homepage = new HomePage(driver);*/
+        homepage = new HomePage(driver);
         options.setExperimentalOption("useAutomationExtension", false);
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         String baseUrl = "http://automationpractice.com/index.php";
@@ -53,4 +55,4 @@ public class PracticeTest {
     homepage.clickCheckBox(); 
     }
 
-}
+}*/

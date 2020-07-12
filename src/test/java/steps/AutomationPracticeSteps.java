@@ -1,19 +1,19 @@
 package steps;
 
 
-import io.cucumber.java.en.*;
-import org.openqa.selenium.WebDriver;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import pageObjects.*;
 import utils.Utils;
 
 
-public class AutomationPracticeSteps extends Utils {
+public class AutomationPracticeSteps {
 
-    Woman woman = new Woman(driver);
-    Dresses dresses= new Dresses(driver);
-    TShirts tShirts= new TShirts(driver);
-    Cart cart=new Cart(driver);
-    HomePage homePage= new HomePage(driver);
+    Woman woman = new Woman();
+    Dresses dresses= new Dresses();
+    TShirts tShirts= new TShirts();
+    Cart cart=new Cart();
+    HomePage homePage= new HomePage();
 
     @Given("open Automationpractice page and add fist product from woman category to cart")
     public void openAutomationpracticePageAndAddFirstProductFromWomanCategoryToCart(){
