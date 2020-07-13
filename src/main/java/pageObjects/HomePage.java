@@ -34,7 +34,7 @@ public class HomePage {
     }*/
     public void searchItem() {
         //scrollToElement(getSearchField);
-        getSearchItem.scrollTo();
+        getSearchItem.hover();
         getSearchField.sendKeys("Blouse");
         getSearchItem.click();
     }

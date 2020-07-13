@@ -49,8 +49,8 @@ public class Woman {
         //List<WebElement> itemsCount = driver.findElements(By.xpath(String.valueOf(getWomenCount)));
         //Assert.assertEquals(itemsCount.size(),7);
         getWomenCount.shouldHave(size(7));
-        getWomanProduct.scrollTo();
-        getWomanAddToCartBtn.scrollTo();
+        getWomanProduct.hover();
+        getWomanAddToCartBtn.hover();
         getWomanAddToCartBtn.click();
         getContinueShopingBtn.click();
     }

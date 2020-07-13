@@ -36,7 +36,7 @@ public class Cart {
     }*/
     public void checkCartItems() {
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        getCartBtn.scrollTo();
+        getCartBtn.hover();
         getWomenProductAttribute.shouldHave(text("Blouse"));
         getDressesProductAttribute.shouldHave(text("Printed Dress"));
         getTShirtsProductAttribute.shouldHave(text("Faded Shor..."));

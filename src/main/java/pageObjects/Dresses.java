@@ -45,8 +45,8 @@ public class Dresses {
         /*List<WebElement> itemsCount = driver.findElements(By.xpath(String.valueOf(getDressesCount)));
         Assert.assertEquals(itemsCount.size(),5);*/
         getDressesCount.shouldHave(size(5));
-        getDressesProduct.scrollTo();
-        getDressesAddToCartBtn.scrollTo();
+        getDressesProduct.hover();
+        getDressesAddToCartBtn.hover();
         getDressesAddToCartBtn.click();
         getContinueShopingBtn.click();
 
