@@ -1,14 +1,14 @@
 plugins {
     id 'java'
-    //id 'application'
+    id 'application'
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-/*application {
+application {
     mainClassName = 'com.something.MyMainClass'
-}*/
+}
 
 repositories {
     mavenLocal()
