@@ -9,13 +9,11 @@ allure {
     autoconfigure = true
     aspectjweaver = true
 }
+resultsDir = file('.../allure-results')
+reportDir = file('.../allure-reports')
 
 group 'org.example'
 version '1.0-SNAPSHOT'
-
-/*application {
-    mainClassName = 'com.something.MyMainClass'
-}*/
 
 repositories {
     mavenLocal()
@@ -29,12 +27,7 @@ tasks.withType(JavaCompile){
 
 test {
     useJUnitPlatform()
-        /*useTestNG() {
-            includeGroups 'smoke', 'sanity'
-           excludeGroups 'regression'
-        }*/
 }
-
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
