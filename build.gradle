@@ -4,6 +4,12 @@ plugins {
     //id 'application'
 }
 
+allure {
+    version = '2.8.1'
+    autoconfigure = true
+    aspectjweaver = true
+}
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -41,6 +47,9 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-java:6.1.0'
     testImplementation 'io.cucumber:cucumber-junit:6.1.0'
     testImplementation 'com.codeborne:selenide:5.13.0'
+    testImplementation('io.qameta.allure:allure-cucumber5-jvm :2.13.2')
+    testImplementation('io.qameta.allure:allure-selenide:2.13.2')
+    testRuntimeOnly('io.qameta.allure:allure-junit5:2.8.1')
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
 }
 

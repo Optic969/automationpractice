@@ -12,9 +12,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin ={"io.qameta.allure:allure-cucumber5-jvm :2.13.2"},
         features = "src/test/java/features",
         glue = "steps",
         snippets = CucumberOptions.SnippetType.CAMELCASE)
+
+
+
+
 
 public class PracticeTestCucumberRunner {
 
@@ -24,10 +29,10 @@ public class PracticeTestCucumberRunner {
         Configuration.timeout = 4000;
     }
 
-    @AfterClass
+    /*@AfterClass
     public static void shutDown() {
         Selenide.closeWebDriver();
-    }
+    }/*
 
         /*public static WebDriver driver;
 
