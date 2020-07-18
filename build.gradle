@@ -1,19 +1,25 @@
 plugins {
     id 'java'
-    id "io.qameta.allure" version "2.8.1"
+    id 'io.qameta.allure' version '2.8.0'
     //id 'application'
 }
 
-allure {
-    version = '2.8.1'
+/*allure {
+    version = '2.3.15'
     autoconfigure = true
     aspectjweaver = true
-}
-resultsDir = file('.../allure-results')
-reportDir = file('.../allure-reports')
+}*/
+allure {
+    aspectjweaver = true
+    autoconfigure = true
+    version = '2.13.2'}
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+
+/*application {
+    mainClassName = 'com.something.MyMainClass'
+}*/
 
 repositories {
     mavenLocal()
@@ -26,23 +32,27 @@ tasks.withType(JavaCompile){
 }
 
 test {
-    useJUnitPlatform()
+    useJUnit()
+        /*useTestNG() {
+            includeGroups 'smoke', 'sanity'
+           excludeGroups 'regression'
+        }*/
 }
 
+
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+    //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    //testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
     testImplementation 'junit:junit:4.12'
     implementation 'junit:junit:4.12'
-    implementation("io.github.bonigarcia:webdrivermanager:4.0.0")
+    //implementation("io.github.bonigarcia:webdrivermanager:4.0.0")
     implementation 'com.codeborne:selenide:5.12.2'
-    testImplementation 'io.cucumber:cucumber-java:6.1.0'
-    testImplementation 'io.cucumber:cucumber-junit:6.1.0'
-    testImplementation 'com.codeborne:selenide:5.13.0'
-    testImplementation('io.qameta.allure:allure-cucumber5-jvm :2.13.2')
-    testImplementation('io.qameta.allure:allure-selenide:2.13.2')
-    testRuntimeOnly('io.qameta.allure:allure-junit5:2.8.1')
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testImplementation 'io.cucumber:cucumber-java:5.5.0'
+    testImplementation 'io.cucumber:cucumber-junit:5.5.0'
+    //testImplementation 'com.codeborne:selenide:5.13.0'
+    //testCompile group: 'io.qameta.allure', name: 'allure-junit5', version: '2.13.2'
+    testImplementation 'io.qameta.allure:allure-cucumber5-jvm:2.13.2'
+    testImplementation 'io.qameta.allure:allure-junit4:2.13.2'
 }
 
