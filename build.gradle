@@ -4,11 +4,6 @@ plugins {
     //id 'application'
 }
 
-/*allure {
-    version = '2.3.15'
-    autoconfigure = true
-    aspectjweaver = true
-}*/
 allure {
     aspectjweaver = true
     autoconfigure = true
@@ -16,10 +11,6 @@ allure {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
-
-/*application {
-    mainClassName = 'com.something.MyMainClass'
-}*/
 
 repositories {
     mavenLocal()
@@ -33,10 +24,6 @@ tasks.withType(JavaCompile){
 
 test {
     useJUnit()
-        /*useTestNG() {
-            includeGroups 'smoke', 'sanity'
-           excludeGroups 'regression'
-        }*/
 }
 
 

@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"},
+        //plugin = {"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"},
         features = "src/test/java/features",
         glue = "steps",
         snippets = CucumberOptions.SnippetType.CAMELCASE)

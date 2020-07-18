@@ -16,7 +16,7 @@ public class AutomationPracticeSteps {
     Cart cart=new Cart();
     HomePage homePage= new HomePage();
 
-    @Given("open AutomationPractice page and add fist product from woman category to cart")
+    @Given("open AutomationPractice page and add first product from woman category to cart")
     public void openAutomationPracticePageAndAddFirstProductFromWomanCategoryToCart(){
         woman.getWomenItem();
     }
