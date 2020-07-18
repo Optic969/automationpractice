@@ -2,6 +2,7 @@ package steps;
 
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.*;
 import utils.Utils;
@@ -38,10 +39,9 @@ public class AutomationPracticeSteps {
     @When("click on checkbox")
     public void clickOnCheckbox(){
         homePage.clickCheckBox();
-    }
-    /*@Then("log out")
+    }/*
+    @Then("log out")
     public void logOut(){
-
     }*/
 
 }

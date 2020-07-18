@@ -29,10 +29,10 @@ public class PracticeTestCucumberRunner {
         Configuration.timeout = 4000;
     }
 
-    /*@AfterClass
+    @AfterClass
     public static void shutDown() {
         Selenide.closeWebDriver();
-    }/*
+    }
 
         /*public static WebDriver driver;
 

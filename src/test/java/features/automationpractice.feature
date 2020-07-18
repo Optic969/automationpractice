@@ -1,4 +1,4 @@
-Feature: AutomationPractice Tests
+Feature: AutomationPracticeTests
   Open AutomationPractice, check possibility to add product to cart,delete them, search them, use checkbox
 
   Scenario: Open AutomationPractice, choose random three items in each category and add to cart, check cart with items,
