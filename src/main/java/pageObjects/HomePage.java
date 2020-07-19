@@ -25,7 +25,7 @@ public class HomePage {
     private SelenideElement getSearchItem = $x("//button[@name='submit_search']");
     private SelenideElement getCheckbox = $x("//input[@name='layered_category_4']");
     private SelenideElement getBreadcrumbWoman = $x("//div[@class='breadcrumb clearfix']//a[contains(text(),'Women')]");
-    private SelenideElement getWomenBtn = $x("//*[@id=\"block_top_menu\"]/ul/li[1]");
+    private SelenideElement getWomenBtn1 = $x("//*[@id=\"block_top_menu\"]/ul/li[1]");
 
     /*public void scrollToElement(WebElement element) {
         Actions actions = new Actions(driver);
@@ -39,7 +39,7 @@ public class HomePage {
         getSearchItem.click();
     }
     public void clickCheckBox(){
-        getWomenBtn.click();
+        getWomenBtn1.click();
         getCheckbox.click();
 
     }
