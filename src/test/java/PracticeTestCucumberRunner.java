@@ -25,8 +25,12 @@ public class PracticeTestCucumberRunner {
 
     @BeforeClass
     public static void setUp() {
-        Configuration.startMaximized = true;
-        Configuration.timeout = 4000;
+        //Configuration.startMaximized = true;
+        //Configuration.timeout = 4000;
+        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.browserSize = "1680x1024";
+        Configuration.browserCapabilities.setCapability("enableVNC",true);
+
     }
 
     /*@AfterClass
