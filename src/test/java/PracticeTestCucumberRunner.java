@@ -30,6 +30,10 @@ public class PracticeTestCucumberRunner {
         Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browserSize = "1680x1024";
         Configuration.browserCapabilities.setCapability("enableVNC",true);
+        if("true".equals(System.getProperty("video.enabled"))){
+            Configuration.browserCapabilities.setCapability("enableVideo",true);
+            Configuration.browserCapabilities.setCapability("videoFrameRate",24);
+        }
 
     }
 

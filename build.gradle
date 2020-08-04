@@ -37,7 +37,7 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-junit:5.5.0'
     //testImplementation 'com.codeborne:selenide:5.13.0'
     //testCompile group: 'io.qameta.allure', name: 'allure-junit5', version: '2.13.2'
-    testImplementation 'io.qameta.allure:allure-cucumber5-jvm:2.13.2'
-    testImplementation 'io.qameta.allure:allure-junit4:2.13.2'
+    implementation 'io.qameta.allure:allure-cucumber5-jvm:2.13.2'
+    //testImplementation 'io.qameta.allure:allure-junit4:2.13.2'
 }
 
