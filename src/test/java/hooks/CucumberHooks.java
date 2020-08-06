@@ -3,10 +3,11 @@ import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.Selenide;
 import com.google.common.io.Files;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
-import org.junit.After;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
