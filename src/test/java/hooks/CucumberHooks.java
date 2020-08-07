@@ -18,36 +18,31 @@ import java.net.URL;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class CucumberHooks {
+ public class CucumberHooks {
 
     @After
-    public void afterScenario(Scenario scenario) throws IOException {
+    static public void afterScenario(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
             screenshot();
-            String sessionId = getSessionId();
-            System.out.println("video.enabled: " + System.getProperty("video.enabled"));
-            Selenide.close();
-            if ("true".equals(System.getProperty("video.enabled"))) {
-                Selenide.sleep(5000);
-                attachAllureVideo(sessionId);
-            }
+
         }
 
     }
 
     @Attachment(type = "image/png")
-    private byte[] screenshot() throws IOException {
+    static public byte[] screenshot() throws IOException {
         File screenshot = Screenshots.takeScreenShotAsFile();
         return Files.toByteArray(screenshot);
     }
+}
 
 
-    public static String getSessionId() {
+   /* public static final String getSessionId() {
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
     }
 
 
-    public static void attachAllureVideo(String sessionId) {
+    public static final void attachAllureVideo(String sessionId) {
         try {
             String selenoidUrl = "http://localhost:4444";
             URL videoUrl = new URL(selenoidUrl + "/video/" + sessionId + ".mp4");
@@ -61,7 +56,7 @@ public class CucumberHooks {
         }
     }
 
-    public static InputStream getSelenoidVideo(URL url) {
+    public static final InputStream getSelenoidVideo(URL url) {
         int lastSize = 0;
         for (int i = 0; i < 20; i++) {
             try {
@@ -83,7 +78,7 @@ public class CucumberHooks {
         return null;
     }
 
-    public static void deleteSelenoidVideo(URL url) {
+    public static final void deleteSelenoidVideo(URL url) {
         try {
             HttpURLConnection deleteConn = (HttpURLConnection) url.openConnection();
             deleteConn.setDoOutput(true);
@@ -96,4 +91,4 @@ public class CucumberHooks {
             e.printStackTrace();
         }
     }
-}
+}*/

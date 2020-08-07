@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        strict = true,
         plugin = {"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"},
         features = "src/test/java/features",
         glue = {"steps", "hooks"},
