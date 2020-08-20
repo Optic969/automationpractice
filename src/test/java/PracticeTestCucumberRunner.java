@@ -12,9 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        strict = true,
         plugin = {"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"},
-        features = "src/test/java/features",
+        features = "src/test/features",
         glue = {"steps", "hooks"},
         snippets = CucumberOptions.SnippetType.CAMELCASE)
 
@@ -31,12 +30,9 @@ public class PracticeTestCucumberRunner {
         Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browserSize = "1680x1024";
         Configuration.browserCapabilities.setCapability("enableVNC",true);
-        if("true".equals(System.getProperty("video.enabled"))){
-            Configuration.browserCapabilities.setCapability("enableVideo",true);
-            Configuration.browserCapabilities.setCapability("videoFrameRate",24);
-        }
-
     }
+
+}
 
     /*@AfterClass
     public static void shutDown() {
@@ -57,4 +53,4 @@ public class PracticeTestCucumberRunner {
                 driver.quit();
         }*/
 
-}
+

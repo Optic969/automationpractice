@@ -21,7 +21,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
  public class CucumberHooks {
 
     @After
-    static public void afterScenario(Scenario scenario) throws IOException {
+    public void afterScenario(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
             screenshot();
 
@@ -30,7 +30,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
     }
 
     @Attachment(type = "image/png")
-    static public byte[] screenshot() throws IOException {
+     private byte[] screenshot() throws IOException {
         File screenshot = Screenshots.takeScreenShotAsFile();
         return Files.toByteArray(screenshot);
     }

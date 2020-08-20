@@ -6,12 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import org.jsoup.nodes.Element;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 
 import static com.codeborne.selenide.CollectionCondition.size;
